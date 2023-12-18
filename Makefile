@@ -7,13 +7,13 @@ telco5:	telco5.cob
 	cobc -Wall -O2 -x telco5.cob
 
 run:	all
-	echo "Y" | ./telco
-	echo "Y" | ./telco5
+	echo "Y" | time ./telco
+	echo "Y" | time ./telco5
 	tail TELCO.TXT TELCO5.TXT
 
 nocalc:	all
-	echo "N" | ./telco
-	echo "N" | ./telco5
+	echo "N" | time ./telco
+	echo "N" | time ./telco5
 	tail TELCO.TXT TELCO5.TXT
 
 clean:
